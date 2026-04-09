@@ -4,7 +4,7 @@ class Tile:
     self.tileType = tileType;
     self.tileValue = 0;
   def getTileType(self) -> str:
-    randomNum = random.randint(0, 4);
+    randomNum = random.randint(0, 5);
     if randomNum == 0:
       self.tileType = "grass";
       self.tileValue = 0;
@@ -20,4 +20,7 @@ class Tile:
     elif randomNum == 4:
       self.tileType = "road";
       self.tileValue = -1;
+    elif randomNum == 5:
+      self.tileType = "city";
+      self.tileValue = 1;
     return self.tileType;
